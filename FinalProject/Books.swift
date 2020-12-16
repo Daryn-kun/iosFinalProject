@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import RealmSwift
+
+class Books: Object{
+    @objc dynamic var id = 0
+    @objc dynamic var bookTitle: String?
+    @objc dynamic var imgUrl: String?
+    @objc dynamic var urlId: String?
+    override class func primaryKey() -> String? {
+        return "id"
+    }
+    
+}

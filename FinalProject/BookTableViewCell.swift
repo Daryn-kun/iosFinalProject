@@ -10,6 +10,8 @@ import UIKit
 
 class BookTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var bookTitleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +21,11 @@ class BookTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    static let identifier = "BookTableViewCell"
+    
+    static func nib() -> UINib{
+        return UINib(nibName: "BookTableViewCell", bundle: nil)
     }
     
 }
